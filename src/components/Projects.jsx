@@ -27,7 +27,7 @@ const projectsData = [
     description: 'Sistema integral para el servicio médico de la Universidad Madero. Permite la gestión de consultas, historial clínico de estudiantes y administración de los servicios de salud universitarios. Acceso: dr.torres@medapp.com / password123',
     image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=600',
     tech: ['Next.js', 'React', 'Healthcare System'],
-    demo: 'https://app-medico-v2.vercel.app/',
+    demo: 'https://app-medico-v2-git-demo-disloyalcobras-projects.vercel.app/login',
     repo: 'https://github.com/disloyalcobra/AppMedicoV2'
   },
   {
@@ -46,11 +46,11 @@ const Projects = () => {
     <section id="projects" className="section">
       <div className="container">
         <h2 className="section-title fade-in">Proyectos Destacados</h2>
-        
+
         <div className="projects-grid">
           {projectsData.map((project, index) => (
-            <div 
-              key={project.id} 
+            <div
+              key={project.id}
               className="project-card glass-card fade-in"
               style={{ transitionDelay: `${index * 0.1}s` }}
             >
@@ -60,13 +60,13 @@ const Projects = () => {
               <div className="project-info">
                 <h3 className="project-title">{project.title}</h3>
                 <p className="project-description">{project.description}</p>
-                
+
                 <div className="project-tech">
                   {project.tech.map(t => (
                     <span key={t} className="tech-tag">{t}</span>
                   ))}
                 </div>
-                
+
                 <div className="project-links">
                   <a href={project.demo} className="project-link" target="_blank" rel="noreferrer">
                     <ExternalLink size={18} /> Demo
