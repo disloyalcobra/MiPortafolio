@@ -1,6 +1,9 @@
 import React from 'react';
 import { ExternalLink, Code2 } from 'lucide-react';
 import './Projects.css';
+import supplyGameImage from '../assets/imgi_139_que-es-cadena-suministro-1.webp';
+import secturImage from '../assets/secturImage.webp';
+
 
 const projectsData = [
   {
@@ -34,10 +37,19 @@ const projectsData = [
     id: 4,
     title: 'Supply Game — Plataforma Educativa de Cadena de Suministro',
     description: 'Página web didáctica e interactiva enfocada en la enseñanza de la cadena de suministro. Integra un videojuego, quizzes temáticos y un sistema de rankings para hacer el aprendizaje dinámico y competitivo.',
-    image: 'https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&q=80&w=600',
+    image: supplyGameImage,
     tech: ['React', 'Gamification', 'Education'],
     demo: 'https://supply-game.vercel.app/',
     repo: 'https://github.com/disloyalcobra/SupplyGame'
+  },
+  {
+    id: 5,
+    title: 'Portal de Comunicados y Gestión de Documentos — SECTUR',
+    description: 'Portal web desarrollado para la Secretaría de Turismo como proyecto de servicio social. Permite la publicación y difusión de comunicados oficiales, así como la carga, organización y gestión controlada de documentos internos de la secretaría.',
+    image: secturImage,
+    tech: ['Next.js', 'Vercel Blob', 'Drizzle ORM'],
+    demo: 'https://portal-sec-turismo.vercel.app/',
+    repo: 'https://github.com/disloyalcobra/secTurismo'
   }
 ];
 
