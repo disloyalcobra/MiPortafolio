@@ -3,6 +3,7 @@ import { ExternalLink, Code2 } from 'lucide-react';
 import './Projects.css';
 import supplyGameImage from '../assets/imgi_139_que-es-cadena-suministro-1.webp';
 import secturImage from '../assets/secturImage.webp';
+import sportStatsImage from '../assets/stats.jpg';
 
 
 const projectsData = [
@@ -50,6 +51,15 @@ const projectsData = [
     tech: ['Next.js', 'Vercel Blob', 'Drizzle ORM'],
     demo: 'https://portal-sec-turismo.vercel.app/',
     repo: 'https://github.com/disloyalcobra/secTurismo'
+  },
+  {
+    id: 6,
+    title: 'Sport Stats',
+    description: 'Plataforma web desarrollada para la gestión de estadísticas deportivas. Permite el registro y seguimiento de partidos, jugadores y estadísticas de equipos.',
+    image: sportStatsImage,
+    tech: ['Next.js', 'Vercel Blob', 'Drizzle ORM'],
+    demo: 'https://sport-stats-ij5ullb85-disloyalcobras-projects.vercel.app/',
+    repo: 'https://github.com/disloyalcobra/SportStats'
   }
 ];
 
