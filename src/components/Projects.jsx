@@ -4,6 +4,9 @@ import './Projects.css';
 import supplyGameImage from '../assets/imgi_139_que-es-cadena-suministro-1.webp';
 import secturImage from '../assets/secturImage.webp';
 import sportStatsImage from '../assets/stats.jpg';
+import dentalAppImage from '../assets/images.jpg';
+import videoGameImage from '../assets/game.png';
+import githubImage from '../assets/github.webp';
 
 
 const projectsData = [
@@ -21,7 +24,7 @@ const projectsData = [
     title: 'Legacy Museum — Sistema para Museo',
     description: 'Sistema web completo diseñado para la gestión de un museo. Incluye funcionalidades administrativas como control de acceso mediante inicio de sesión, manejo de colecciones y organización de información institucional.',
     image: 'https://images.unsplash.com/photo-1518998053901-5348d3961a04?auto=format&fit=crop&q=80&w=600',
-    tech: ['React', 'Web System', 'Authentication'],
+    tech: ['Astro', 'Web System', 'Authentication'],
     demo: 'https://legacy-museum.vercel.app/login',
     repo: 'https://github.com/disloyalcobra/LegacyMuseum'
   },
@@ -57,10 +60,36 @@ const projectsData = [
     title: 'Sport Stats',
     description: 'Plataforma web desarrollada para la gestión de estadísticas deportivas. Permite el registro y seguimiento de partidos, jugadores y estadísticas de equipos.',
     image: sportStatsImage,
-    tech: ['Next.js', 'Vercel Blob', 'Drizzle ORM'],
+    tech: ['Next.js', 'React', 'SQLite'],
     demo: 'https://sport-stats-ij5ullb85-disloyalcobras-projects.vercel.app/',
     repo: 'https://github.com/disloyalcobra/SportStats'
+  },
+  {
+    id: 7,
+    title: 'Dental App',
+    description: 'Plataforma web desarrollada para la gestión de una clínica dental. Permite el registro y seguimiento de pacientes, citas, tratamientos, creacion de historias clinicas, etc.',
+    image: dentalAppImage,
+    tech: ['Next.js', 'Turso DB', 'Prisma ORM'],
+    demo: 'https://dentista-demo-five.vercel.app/',
+    repo: 'https://github.com/disloyalcobra/DentistaDemo'
+  },
+  {
+    id: 8,
+    title: 'Videojuego Demo',
+    description: 'Video de demostración de una pequeña demo del desarrollo de un videojuego en 3D realizado en Unity',
+    image: videoGameImage,
+    tech: ['Unity', 'C#', 'Videojuego'],
+    demo: 'https://youtu.be/VoaHfF9mGwM'
+  },
+  {
+    id: 9,
+    title: 'Mas Proyectos',
+    description: 'Proyectos moviles entre otros en mi git hub',
+    image: githubImage,
+    tech: ['Git', 'GitHub', 'Otros...'],
+    repo: 'https://github.com/disloyalcobra?tab=repositories'
   }
+
 ];
 
 const Projects = () => {
