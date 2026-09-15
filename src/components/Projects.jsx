@@ -1,5 +1,5 @@
 import React from 'react';
-import { ExternalLink, Code2 } from 'lucide-react';
+import { ExternalLink, Code2, Play } from 'lucide-react';
 import './Projects.css';
 import supplyGameImage from '../assets/imgi_139_que-es-cadena-suministro-1.webp';
 import secturImage from '../assets/secturImage.webp';
@@ -93,6 +93,9 @@ const projectsData = [
 ];
 
 const Projects = () => {
+  const [isGamePlaying, setIsGamePlaying] = React.useState(false);
+  const gameBaseUrl = import.meta.env.BASE_URL || '/';
+
   return (
     <section id="projects" className="section">
       <div className="container">
@@ -131,6 +134,68 @@ const Projects = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Godot Web Game Section */}
+        <div className="game-section" style={{ marginTop: '6rem', textAlign: 'center' }}>
+          <h3 className="section-title fade-in" style={{ fontSize: '2.5rem', marginBottom: '2rem' }}>Videojuego desarrollado en Godot</h3>
+          <div className="game-container fade-in" style={{
+            display: 'inline-block',
+            padding: '10px',
+            background: 'rgba(255, 255, 255, 0.05)',
+            borderRadius: '16px',
+            boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.3)',
+            maxWidth: '100%',
+            overflow: 'hidden',
+            position: 'relative',
+            width: '100%',
+            maxWidth: '820px',
+            aspectRatio: '16/9'
+          }}>
+            {!isGamePlaying ? (
+              <div
+                className="game-placeholder"
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  background: 'rgba(0, 0, 0, 0.5)',
+                  borderRadius: '8px',
+                  cursor: 'pointer'
+                }}
+                onClick={() => setIsGamePlaying(true)}
+              >
+                <div style={{
+                  background: 'rgba(255, 255, 255, 0.1)',
+                  padding: '20px',
+                  borderRadius: '50%',
+                  marginBottom: '1rem',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  transition: 'background 0.3s ease'
+                }}
+                  onMouseEnter={(e) => e.currentTarget.style.background = 'rgba(255, 255, 255, 0.2)'}
+                  onMouseLeave={(e) => e.currentTarget.style.background = 'rgba(255, 255, 255, 0.1)'}
+                >
+                  <Play size={48} color="white" fill="white" />
+                </div>
+                <p style={{ fontSize: '1.2rem', color: 'white', fontWeight: 'bold' }}>Haz clic para jugar</p>
+              </div>
+            ) : (
+              <iframe
+                src={`${gameBaseUrl}gameWeb/Plataformas.html`}
+                width="100%"
+                height="100%"
+                style={{ border: 'none', borderRadius: '8px' }}
+                title="Godot Web Game"
+              ></iframe>
+            )}
+          </div>
+          <p style={{ marginTop: '1rem', color: '#aaa', fontSize: '0.9rem' }}>El juego se cargará y podrás interactuar al darle Play.</p>
         </div>
       </div>
     </section>
